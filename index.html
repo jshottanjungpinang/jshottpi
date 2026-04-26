@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JShottpi Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="Logo.jpg.jpeg" alt="Gallery Logo"/>
+    </div>
+    <div class="brand">JShottpi</div>
+    <div class="subtitle">GALLERY</div>
+  </div>
+  <nav class="nav-main">
+    <a href="#" onclick="showSection('about'); return false;">About</a>
+    <a href="#" onclick="showSection('wedding'); return false;">Wedding</a>
+    <a href="#" onclick="showSection('couples'); return false;">Couples</a>
+    <a href="#" onclick="showSection('graduations'); return false;">Graduations</a>
+    <a href="#" onclick="showSection('portraits'); return false;">Portraits</a>
+    <a href="#" onclick="showSection('documentation'); return false;">Documentation</a>
+    <a href="#" onclick="showSection('sports'); return false;">Sports</a>
+    <a href="#" onclick="showSection('contactus'); return false;">Contact Us</a>
+  </nav>
+
+  <!-- About Section -->
+<div class="about-section section" id="about">
+  <div class="about-image">
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=700&h=800&facepad=2" alt="About"/>
+  </div>
+  <div class="about-text">
+    <h1>Hey I’m Tilly Rose,</h1>
+    <p>
+      I’m a lover of creating memories that tell an endless story. When I’m not working you’ll normally find me either at the beach with my pup or hiking in the mountains.
+    </p>
+    <p>
+      My passion for photography started at a young age from capturing family events & birthdays to spontaneous shoots with friends.
+    </p>
+    <p>
+      I love creating happy, fun candid moments that capture the real you!
+    </p>
+  </div>
+</div>
+
+<!-- Wedding Section -->
+<div class="wedding-section section" id="wedding">
+  <div class="wedding-grid">
+    <div class="wedding-item">
+      <img src="Untitled design.jpg.jpeg" alt="Nama Wedding 1"/>
+      <a href="#">Nama Wedding 1</a>
+    </div>
+  </div>
+</div>
+
+<!-- Couples Section -->
+<div class="couples-section section" id="couples">
+  <div class="couples-grid">
+    <div class="couples-item">
+      <img src="Untitled design (2).jpg.jpeg" alt="Credo dan Irna"/>
+      <a href="#">Credo dan Irna</a>
+    </div>
+  </div>
+</div>
+
+<!-- Graduations Section -->
+<div class="graduations-section section" id="graduations">
+  <div class="graduations-grid">
+    <div class="graduations-item">
+      <img src="Untitled design (1).jpg.jpeg" alt="Graduation 1"/>
+      <a href="#">Graduation 1</a>
+    </div>
+  </div>
+</div>
+
+<!-- Portraits Section -->
+<div class="portraits-section section" id="portraits">
+  <div class="portraits-grid">
+    <div class="portrait-item">
+      <img src="Abrian & Charles.jpg.jpeg" alt="Abrian"/>
+      <a href="#">Abrian</a>
+    </div>
+    <div class="portrait-item">
+      <img src="Adzra.jpg.jpeg" alt="Adzra"/>
+      <a href="#">Adzra</a>
+    </div>
+  </div>
+</div>
+
+<!-- Documentation Section -->
+<div class="documentation-section section" id="documentation">
+  <div class="documentation-grid">
+    <div class="documentation-item">
+      <img src="Copy of EVENT DOCUMENTATION (1).jpg.jpeg" alt="Documentation 1"/>
+    </div>
+    <div class="documentation-item">
+      <img src="EVENT DOCUMENTATION.jpg.jpeg" alt="Documentation 2"/>
+    </div>
+  </div>
+</div>
+
+<!-- Sports Section -->
+<div class="sports-section section" id="sports">
+  <div class="sports-grid">
+    <div class="sports-item">
+      <img src="Untitled design (3).jpg.jpeg" alt="Sports 1"/>
+      <a href="#">Albert</a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Us Section -->
+<div class="contactus-section section" id="contactus">
+  <div class="contactus-content">
+    <h2>Contact Us</h2>
+    <p>Reach us at: <a href="mailto:info@jshottpi.com">info@jshottpi.com</a></p>
+    <p>Reach us at: <a href="mailto:info@jshottpi.com">info@jshottpi.com</a></p>
+  </div>
+</div>
+
+  <script>
+function showSection(section) {
+  var sectionIds = [
+    'about', 'wedding', 'couples', 'graduations',
+    'portraits', 'documentation', 'sports', 'contactus'
+  ];
+  sectionIds.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+  var target = document.getElementById(section);
+  if (target) {
+    target.style.display = (section === 'about' ? 'flex' : 'flex');
+  }
+}
+window.onload = function() {
+  showSection('about');
+}
+  </script>
+</body>
+</html>
